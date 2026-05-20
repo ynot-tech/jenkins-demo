@@ -1,9 +1,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0">
+
     <modelVersion>4.0.0</modelVersion>
+
     <groupId>com.example</groupId>
     <artifactId>jenkins-demo</artifactId>
     <version>1.0.0</version>
     <packaging>jar</packaging>
+
     <name>Jenkins GitHub Packages Demo</name>
 
     <distributionManagement>
@@ -13,4 +16,5 @@
             <url>https://maven.pkg.github.com/ynot-tech/jenkins-demo</url>
         </repository>
     </distributionManagement>
+
 </project>
