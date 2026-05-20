@@ -1,0 +1,35 @@
+pipeline {
+    agent any   // Run on any available Jenkins agent
+
+    stages {
+        stage('Clone') {
+            steps {
+                git branch: 'main', url: 'https://github.com/ynot-tech/jenkins-demo.git
+            }
+        }
+
+        stage('Build') {
+            steps {
+                echo '🔨 Building the project...'
+                // Example: For Java -> sh 'mvn clean install'
+                // Example: For Node.js -> sh 'npm install'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                echo '🧪 Running tests...'
+                // Example: sh 'mvn test'
+                // Example: sh 'npm test'
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                echo '🚀 Deploying application...'
+                // Example: Copy files, run docker build & run
+                // Example: Deploy to server
+            }
+        }
+    }
+}
